@@ -2,8 +2,8 @@ import cv2
 import numpy as np
 
 img = np.zeros(shape=(512, 512, 3), dtype=np.uint8) + 255
-cy = 256 # img.shape[0]
-cx = 256 # img.shape[1]
+cy = img.shape[0] // 2 # 256
+cx = img.shape[1] // 2 # 256
 
 for r in range(200, 0, -100):
     cv2.circle(img, (cx, cy), r, color=(255, 0, 0))
